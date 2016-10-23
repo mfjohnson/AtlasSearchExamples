@@ -43,7 +43,13 @@ atlasREST("/api/atlas/discovery/search/dsl?query=hive_table+where+name='drivers'
 print("-----------------------------------------")
 print("DSL SEARCH FOR ENTITIES CONTAINING COLUMN NAME")
 atlasREST("/api/atlas/discovery/search/dsl?query=hive_table%2C+columns+where+name%3D%27tweet_id%27")
+atlasREST("/api/atlas/discovery/search/dsl?query=hive_table%2C+columns+select+name%2C+owner")
 #atlasREST("/api/atlas/discovery/search/dsl?query=hive_column+where+name%3D%27tweet_id%27")
+
+print("-----------------------------------------")
+print("DSL SEARCH BASED ON TABLENAME ONLY DEMONSTRATING DISPLAYING ONLY SELECT PROPERTIES and arrays")
+#atlasREST("/api/atlas/discovery/search/dsl?query=hive_table+where+name='drivers' select tableType,temporary,retention,qualifiedName,description,name,owner,comment,createTime,columns, select owner")
+
 
 
 
